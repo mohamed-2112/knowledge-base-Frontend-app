@@ -1,0 +1,171 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.profile-user {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.profile-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(65, 255, 148, 0.4);
+  box-shadow:
+    0 0 0 6px rgba(65, 255, 148, 0.05),
+    0 0 20px rgba(65, 255, 148, 0.22);
+  background: #0a1510;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+
+.profile-email {
+  margin: 0.4rem 0 0.9rem;
+  color: var(--color-text-soft);
+}
+
+.profile-info-preview {
+  margin: 0;
+  color: var(--color-text-soft);
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.personal-info-card {
+  min-height: 180px;
+}
+
+.personal-info-list {
+  width: 100%;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.personal-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(65, 255, 148, 0.12);
+}
+
+.personal-info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.personal-info-key {
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.personal-info-value {
+  color: var(--color-text-main);
+  text-align: right;
+}
+
+
+/* This part is for creating personal info */
+
+
+
+.personal-info-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.personal-info-card {
+  min-height: 180px;
+}
+
+.personal-info-list {
+  width: 100%;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.personal-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(65, 255, 148, 0.12);
+}
+
+.personal-info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.personal-info-key {
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.personal-info-value {
+  color: var(--color-text-main);
+  text-align: right;
+}
+
+.personal-info-form-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.personal-info-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.personal-info-remove-button {
+  height: 46px;
+}
+
+.create-personal-info-modal {
+  width: min(780px, 94vw);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .personal-info-section-header {
+    flex-direction: column;
+  }
+
+  .personal-info-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-info-remove-button {
+    width: 100%;
+  }
+}

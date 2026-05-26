@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text-main);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(65, 255, 148, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(65, 255, 148, 0.08), transparent 26%),
+    radial-gradient(circle at 50% 100%, rgba(65, 255, 148, 0.07), transparent 28%),
+    linear-gradient(180deg, #010504 0%, #04100a 100%);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.app-page {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.app-container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.hero-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: var(--glow-primary);
+}
+
+.app-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 0.8rem;
+  color: var(--color-text-main);
+  text-shadow: 0 0 18px rgba(65, 255, 148, 0.18);
+}
+
+.app-subtitle {
+  color: var(--color-text-soft);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Sections */
+.app-section {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card), var(--glow-soft);
+  padding: 1.8rem;
+  backdrop-filter: blur(14px);
+}
+
+.app-container > .app-section + .app-section {
+  margin-top: 1.75rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-main);
+}
+
+.section-description {
+  color: var(--color-text-muted);
+  margin-bottom: 1.3rem;
+}
+
+/* Card */
+.app-card {
+  background: var(--color-bg-card-strong);
+  border: 1px solid rgba(65, 255, 148, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: inset 0 0 0 1px rgba(65, 255, 148, 0.04);
+}
+
+/* Buttons */
+.btn-app-primary {
+  background: linear-gradient(135deg, var(--color-primary), #8affc1);
+  border: none;
+  color: #02250f;
+  font-weight: 700;
+  border-radius: 14px;
+  padding: 0.8rem 1.15rem;
+  box-shadow: var(--glow-soft);
+}
+
+.btn-app-outline {
+  background: rgba(65, 255, 148, 0.04);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-main);
+  border-radius: 14px;
+  padding: 0.75rem 1.1rem;
+  transition: 0.2s ease;
+}
+
+.btn-app-outline:hover {
+  box-shadow: var(--glow-soft);
+  color: var(--color-primary);
+}
+
+/* Badge */
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(65, 255, 148, 0.08);
+  color: var(--color-primary);
+  border: 1px solid rgba(65, 255, 148, 0.28);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: var(--glow-soft);
+}
+
+/* Layout grid for lower sections */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  align-items: stretch;
+}
+
+.dashboard-grid > .app-section {
+  margin-top: 0;
+  min-height: 330px;
+  height: auto;
+
+}
+
+.dashboard-grid > .app-section + .app-section {
+  margin-top: 0;
+}
+
+.empty-text {
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+}
+
+.error-text {
+  color: #ff7a7a;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+
+  .dashboard-grid > .app-section {
+    min-height: auto;
+  }
+
+  .app-page {
+    padding: 1rem;
+  }
+}

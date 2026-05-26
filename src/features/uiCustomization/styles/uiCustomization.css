@@ -1,0 +1,232 @@
+.ui-customization-section {
+  margin-top: 2rem;
+}
+
+.ui-customization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.6rem;
+  text-align: left;
+}
+
+.ui-customization-header-content {
+  flex: 1;
+  max-width: none;
+  padding-right: 2rem;
+}
+
+.ui-customization-kicker {
+  display: inline-flex;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.ui-customization-title {
+  margin: 0 0 0.45rem;
+  text-align: left;
+}
+
+.ui-customization-description {
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.ui-customization-status-badge {
+  flex-shrink: 0;
+}
+
+.ui-customization-form {
+  padding-top: 0.25rem;
+}
+
+.ui-customization-form .app-label {
+  display: block;
+  text-align: left;
+}
+
+.ui-customization-textarea {
+  min-height: 140px;
+}
+
+.ui-customization-hint {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.ui-customization-actions {
+  justify-content: flex-end;
+}
+
+.ui-template-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.ui-template-preview-card {
+  min-height: 260px;
+}
+
+.ui-template-preview-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ui-template-preview-title {
+  margin: 0 0 0.35rem;
+  color: var(--color-text-main);
+  font-size: 1.08rem;
+  font-weight: 850;
+}
+
+.ui-template-preview-meta {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+
+.ui-template-empty-text {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-template-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.ui-template-page-chip {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-main);
+  background: rgba(65, 255, 148, 0.05);
+  border: 1px solid rgba(65, 255, 148, 0.22);
+  border-radius: 999px;
+  padding: 0.32rem 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+
+.ui-theme-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.ui-theme-chip {
+  color: var(--color-primary);
+  background: rgba(65, 255, 148, 0.07);
+  border: 1px solid rgba(65, 255, 148, 0.16);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.ui-template-node-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.ui-template-node-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(65, 255, 148, 0.1);
+}
+
+.ui-template-node-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ui-template-node-props {
+  color: var(--color-text-soft);
+  background: rgba(1, 7, 4, 0.65);
+  border: 1px solid rgba(65, 255, 148, 0.1);
+  border-radius: 12px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-template-json-details {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(65, 255, 148, 0.1);
+  padding-top: 0.85rem;
+}
+
+.ui-template-json-details summary {
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.ui-template-json {
+  max-height: 320px;
+  overflow: auto;
+  margin: 0.85rem 0 0;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(1, 7, 4, 0.78);
+  border: 1px solid rgba(65, 255, 148, 0.12);
+  color: var(--color-text-soft);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .ui-customization-header {
+    flex-direction: column;
+  }
+
+  .ui-template-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .ui-customization-actions {
+    flex-direction: column-reverse;
+  }
+
+  .ui-customization-actions button {
+    width: 100%;
+  }
+
+  .ui-template-node-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ui-template-node-props {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
