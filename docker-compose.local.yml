@@ -1,0 +1,9 @@
+services:
+  react-frontend:
+    build:
+      context: .
+      args:
+        REACT_APP_API_BASE_URL: ${REACT_APP_API_BASE_URL:-http://localhost:8080}
+    container_name: react-frontend
+    ports:
+      - "3000:80"
